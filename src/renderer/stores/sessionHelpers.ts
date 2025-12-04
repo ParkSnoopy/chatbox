@@ -44,7 +44,6 @@ export async function preprocessFile(
   const remoteConfig = settingActions.getRemoteConfig()
 
   try {
-    const isPro = settingActions.isPro()
     const uniqKey = StorageKeyGenerator.fileUniqKey(file)
 
     // 检查是否已经处理过这个文件
@@ -183,7 +182,6 @@ export async function preprocessLink(
   error?: string
 }> {
   try {
-    const isPro = settingActions.isPro()
     const uniqKey = StorageKeyGenerator.linkUniqKey(url)
 
     // 检查是否已经处理过这个链接
